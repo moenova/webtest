@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
- 
-<head>
-   <meta charset="utf-8">
-  <title>明日方舟 基建收益折算</title>
-</head>
-<body>
     
-    <h1>明日方舟 基建收益 评估</h1>
+    
+<body>
+
     
 <table>
   <tr>
-    <th>项目</th><th>产量(x100)</th> 
+    <th>项目</th><th>产量</th> 
+  </tr>
+    <tr>
+    <th>每天额外获得的赤金个数</th><th><input type="number" id="fixGoldNum" value= 2></th> 
   </tr>
   <tr>
-    <th>经验</th><th><input type="number" id="exp" value= 0></th> 
+    <th>经验(x100)</th><th><input type="number" id="exp" value= 0></th> 
   </tr>
   <tr>
-    <th>赤金收益</th><th><input type="number" id="gold" value=0></th> 
+    <th>赤金收益(x100)</th><th><input type="number" id="gold" value=0></th> 
   </tr>
   <tr>
-    <th>龙门币收益</th><th><input type="number" id="cash" value=0></th> 
+    <th>龙门币收益(x100)</th><th><input type="number" id="cash" value=0></th> 
   </tr>
      <tr>
-    <th><button >理智折算收益</button></th><th id ="res"></th> 
+    <th>理智折算收益 min(赤金,龙门币) 算法</th><th id ="Rmin"></th> 
   </tr>
-</table>
+     <tr>
+    <th>理智折算收益 ave(赤金,龙门币) 算法</th><th id ="Rave"></th> 
+  </tr>
     
-
+</table>
+    <button>计算</button>
 
   
 </body>

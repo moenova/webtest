@@ -10,6 +10,7 @@ document.querySelector("body button").addEventListener("click", fun)
 function fun(e) {
     e.preventDefault();
     
+    const fixGoldNum = document.querySelector("body table #fixGoldNum").value
     const exp = document.querySelector("body table #exp").value
     const gold = document.querySelector("body table #gold").value
     const cash = document.querySelector("body table #cash").value
@@ -18,10 +19,17 @@ function fun(e) {
     //log(gold.value)
     //log(cash.value)
     const factor = 100
-    const raw = (exp*factor)/259.1 + Math.min(gold*factor+1000,cash*factor)/250
+    const min_raw = (exp*factor)/259.1 + Math.min(gold*factor+fixGoldNum*500,cash*factor)/250
     
-    const res =Math.round(raw * 10) / 10
-    log(res)
-    document.querySelector("body table #res").innerText = res
+    const Rmin =Math.round(min_raw * 10) / 10
+    log(Rmin)
+    document.querySelector("body table #Rmin").innerText = Rmin
+    
+    
+    const ave_raw = (exp*factor)/259.1 + Math.ave(gold*factor,cash*factor)/250
+    
+    const Rave =Math.round(ave_raw * 10) / 10
+    log(Rave)
+    document.querySelector("body table #Rave").innerText = Rave
 }
 
