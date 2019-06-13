@@ -26,7 +26,7 @@ function fun(e) {
     document.querySelector("body table #Rmin").innerText = Rmin
     
     
-    const ave_raw = (exp*factor)/259.1 + Math.ave(gold*factor,cash*factor)/250
+    const ave_raw = (exp*factor)/259.1 + (gold*factor,cash*factor)/2/250
     
     const Rave =Math.round(ave_raw * 10) / 10
     log(Rave)
