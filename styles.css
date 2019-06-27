@@ -1,0 +1,13 @@
+
+.holder{
+    
+    float:left;
+    background-color:lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+body{
+    
+    background-color:dimgray;
+}
