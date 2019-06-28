@@ -16,17 +16,6 @@ function getRation() {
     const ration_limit = document.querySelector("body table #ration_limit").value
     
     
-    /*
-    log(fixGoldNum)
-    log(ration_limit)
-    log(exp)
-    log(gold)
-    log(cash)
-    log(jade)
-    */
-    
-    
-    
     const factor = 100
     const rock2ration =5.43;
     
@@ -36,9 +25,6 @@ function getRation() {
     const gold2ration_ave = (gold*factor,cash*factor)/500
     
     const jade2ration = (ration_limit/18 - 2*rock2ration - 6.4)*(jade/10)
-    
-    //log("jade:",jade2ration)
-    
     
     const min_raw =   exp2ration  + gold2ration_min + jade2ration   
     const ave_raw =   exp2ration  + gold2ration_ave + jade2ration
@@ -55,7 +41,7 @@ function getRation() {
 
 function getR(value){
     const res = Math.round(value * 10) / 10
-    //log(res)
+   
     return res
 }
 
@@ -63,8 +49,7 @@ function getR(value){
 function getBalanceRD(){
     const Brock = document.querySelector("body table #Brock").value
     const Bdevice = document.querySelector("body table #Bdevice").value
-    //log(Brock)
-    //log(Bdevice)
+
     document.querySelector("body table #BcashRock").value = Brock*800    
     document.querySelector("body table #BcashDevice").value = Bdevice*1000
     

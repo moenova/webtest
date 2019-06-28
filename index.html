@@ -1,76 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-      <link rel="stylesheet" href="styles.css">
-    </head>
-    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
 
+    <div class="imgHolder">
+        <img class="background" src="background.jpg">
+    </div>
 
-    <div class =" holder" >
-<table>
-  <tr>
-    <th>项目</th><th>产量</th> 
-  </tr>
-    <tr>
-    <th>每天额外获得的赤金个数</th><th><input type="number" id="fixGoldNum" value= 2 oninput="getRation()"></th> 
-  </tr>
-      <tr>
-    <th>理智上限</th><th><input type="number" id="ration_limit" value= 125 oninput="getRation()"></th> 
-  </tr>
-  <tr>
-    <th>经验(x100)</th><th><input type="number" id="exp" value= 0 oninput="getRation()"></th> 
-  </tr>
-  <tr>
-    <th>赤金收益(x100)</th><th><input type="number" id="gold" value=0 oninput="getRation()"></th> 
-  </tr>
-  <tr>
-    <th>龙门币收益(x100)</th><th><input type="number" id="cash" value=0 oninput="getRation()"></th> 
-  </tr>
-     <tr>
-    <th>合成玉</th><th><input type="number" id="jade" value=0 oninput="getRation()"></th> 
-  </tr>
-   
-     <tr>
-    <th>理智折算收益 min(赤金,龙门币) 算法</th><th id ="Rmin"></th> 
-  </tr>
-     <tr>
-    <th>理智折算收益 ave(赤金,龙门币) 算法</th><th id ="Rave"></th> 
-  </tr>
-    
-</table>
-   
+    <div class="holders">
+        <div class=" holder">
+<div class="imgHolder">
+            <img src="record.png">
+            </div>
+            <div class=context>
+                <table>
+                    <tr>
+                        <th>项目</th>
+                        <th>产量</th>
+                    </tr>
+                    <tr>
+                        <th>每天额外获得的赤金个数</th>
+                        <th><input type="number" id="fixGoldNum" value=2 oninput="getRation()"></th>
+                    </tr>
+                    <tr>
+                        <th>理智上限</th>
+                        <th><input type="number" id="ration_limit" value=125 oninput="getRation()"></th>
+                    </tr>
+                    <tr>
+                        <th>经验(x100)</th>
+                        <th><input type="number" id="exp" value=0 oninput="getRation()"></th>
+                    </tr>
+                    <tr>
+                        <th>赤金收益(x100)</th>
+                        <th><input type="number" id="gold" value=0 oninput="getRation()"></th>
+                    </tr>
+                    <tr>
+                        <th>龙门币收益(x100)</th>
+                        <th><input type="number" id="cash" value=0 oninput="getRation()"></th>
+                    </tr>
+                    <tr>
+                        <th>合成玉</th>
+                        <th><input type="number" id="jade" value=0 oninput="getRation()"></th>
+                    </tr>
 
- </div>
-    
-<div class =" holder" >
-    
-    <h1> 合成玉制造-平衡装置</h1>
-<table >
-   <tr>
-    <th>固源岩</th><th><input type="number" id="Brock" value= 0 oninput="getBalanceRD()" ></th> 
-    <th>+</th>
-       <th>装置</th><th><input type="number" id="Bdevice" value= 0 oninput="getBalanceRD()" ></th> 
-  </tr>
-      <tr>
-    <th>龙门币</th><th><input type="number" id="BcashRock" value= 0 oninput="getBalanceCash()"></th> 
-          <th>+</th><th>龙门币</th><th><input type="number" id="BcashDevice" value= 0 oninput="getBalanceCash()"></th> 
-           
-          <th>=</th><th id="BcashTotal"></th> 
-          
-  </tr>
+                    <tr>
+                        <th>理智折算收益 min(赤金,龙门币) 算法</th>
+                        <th id="Rmin"></th>
+                    </tr>
+                    <tr>
+                        <th>理智折算收益 ave(赤金,龙门币) 算法</th>
+                        <th id="Rave"></th>
+                    </tr>
 
-      <tr>
-    <th>合成玉折算</th><th id="Bjade"></th> 
-  </tr>
+                </table>
+            </div>
 
-</table>
-   
 
- </div>
-    
+
+        </div>
+
+        <div class=" holder">
+
+<div class="imgHolder">
+            <img src="record.png">
+            </div>
+            <div class="context">
+
+                <h1> 合成玉制造-平衡装置</h1>
+                <table>
+                    <tr>
+                        <th>固源岩</th>
+                        <th><input type="number" id="Brock" value=0 oninput="getBalanceRD()"></th>
+                        <th>+</th>
+                        <th>装置</th>
+                        <th><input type="number" id="Bdevice" value=0 oninput="getBalanceRD()"></th>
+                    </tr>
+                    <tr>
+                        <th>龙门币</th>
+                        <th><input type="number" id="BcashRock" value=0 oninput="getBalanceCash()"></th>
+                        <th>+</th>
+                        <th>龙门币</th>
+                        <th><input type="number" id="BcashDevice" value=0 oninput="getBalanceCash()"></th>
+
+                        <th>=</th>
+                        <th id="BcashTotal"></th>
+
+                    </tr>
+
+                    <tr>
+                        <th>合成玉折算</th>
+                        <th id="Bjade"></th>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
 </body>
-    
-    <script src="script.js"></script>
-    
+
+<script src="script.js"></script>
+
 </html>

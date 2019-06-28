@@ -1,13 +1,58 @@
 
+.holders{
+    position: fixed;
+    top:5%;
+    border: 30px;
+}
+
 .holder{
     
     float:left;
-    background-color:lightgray;
-    padding: 10px;
-    margin: 10px;
+    padding: 30px;
+    margin: 30px;
+    width:500px;
+    height:300px;
 }
 
-body{
+.holder .imgHolder{
+    position:relative;
+    left:-30px;
+    top:-30px;
+    width: 560px;
+    opacity: 0.5;
+}
+
+.holder .imgHolder img{
+    width: 100%;
     
-    background-color:dimgray;
+}
+
+.context{
+    position: relative;
+    top:-330px;
+    color: white;
+    opacity: 100%;
+    text-shadow: #343a40 2px 2px;
+}
+
+input{
+    width: 100px;
+}
+
+html{
+    background-image: url(road.png);
+     background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover; 
+}
+
+.background{
+    
+    position:fixed;
+    top:-125px;
+    left:0px;
+    
+    clip: rect(123px,3000px,927px,0px);
+    
 }
