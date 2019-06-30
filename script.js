@@ -17,7 +17,7 @@ function getRation() {
     
     
     const factor = 100
-    const rock2ration =5.88;
+    const rock2ration = 4.7;
     
     const exp2ration = (exp*factor)/259.1;
     
