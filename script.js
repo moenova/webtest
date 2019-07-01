@@ -4,7 +4,8 @@
 const log = console.log
 
 
-
+getRation()
+getBalanceRD()
 
 function getRation() {
     const fixGoldNum = document.querySelector("body table #fixGoldNum").value
