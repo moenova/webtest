@@ -12,24 +12,42 @@ function getRation() {
     const gold = document.querySelector("body table #gold").value
     const cash = document.querySelector("body table #cash").value
     
-    const jade = document.querySelector("body table #jade").value
+    const Rjade = document.querySelector("body table #Rjade").value
+    const Djade = document.querySelector("body table #Djade").value
+    
     const ration_limit = document.querySelector("body table #ration_limit").value
     
-    
+
     const factor = 100
-    const rock2ration = 4.7;
+    const rock2ration =4.59;
+    const device2ration = 13.28;
     
     const exp2ration = (exp*factor)/259.1;
     
     const gold2ration_min = Math.min(gold*factor+fixGoldNum*500,cash*factor)/250
-    const gold2ration_ave = (gold*factor,cash*factor)/500
+    const gold2ration_ave = (gold*factor+cash*factor)/500
     
-    const jade2ration = (ration_limit/18 - 2*rock2ration - 6.4)*(jade/10)
     
-    const min_raw =   exp2ration  + gold2ration_min + jade2ration   
-    const ave_raw =   exp2ration  + gold2ration_ave + jade2ration
+    const R_num_piece = Rjade/10
+    const D_num_piece = Djade/10
     
-          
+    const Rjade2ration = (ration_limit/18)*R_num_piece
+    const Djade2ration = (ration_limit/18)*D_num_piece
+    
+    
+    const min_raw =   exp2ration  + gold2ration_min + Rjade2ration   + Djade2ration
+    const ave_raw =   exp2ration  + gold2ration_ave + Rjade2ration + Djade2ration
+    
+
+    
+    document.querySelector("body table #Rjade_rat").innerText = getR(2*rock2ration*R_num_piece)
+    document.querySelector("body table #Rjade_cash").innerText = getR(1600*R_num_piece)
+    
+
+    document.querySelector("body table #Djade_rat").innerText = getR(device2ration*D_num_piece)
+    document.querySelector("body table #Djade_cash").innerText = getR(1000*D_num_piece)
+   
+    
     document.querySelector("body table #Rmin").innerText = getR(min_raw)
     
     document.querySelector("body table #Rave").innerText = getR(ave_raw)
