@@ -1,6 +1,8 @@
 
 
+
 .holder{
+    top:10%;
     margin: 10px;
     border: 10px;
     padding: 10px;
@@ -65,11 +67,13 @@ input{
 }
 
 html{
-    background-image: url(road.png);
+    background-image: url(background.jpg);
      background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
+    height:100%;
     background-size: cover;
+    color:black;
+    
 }
 
 
@@ -84,7 +88,6 @@ html{
     position:fixed;
     top:-125px;
     left:0px;
-    
     clip: rect(123px,3000px,927px,0px);
     
 }
