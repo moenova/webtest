@@ -1,26 +1,33 @@
 
-.holders{
-    position: fixed;
-    top:5%;
-    border: 30px;
-}
 
 .holder{
+    margin: 10px;
+    border: 10px;
+    padding: 10px;
     
-    float:left;
-    padding: 30px;
-    margin: 30px;
-    width:500px;
-    height:300px;
+}
+
+.holders #income_holder{
+    position: fixed;
+    width: 580px;
+    height: 680px;
+    
+}
+
+.holders #balance_holder{
+    position: fixed;
+    width: 580px;
+    height: 520px;
+    left:610px;
+    
 }
 
 .holder .imgHolder{
-    position:relative;
-    left:-30px;
-    top:-30px;
-    width: 560px;
+    position: absolute;
+    height: 100%;
     opacity: 0.5;
 }
+
 
 .holder .imgHolder img{
     width: 100%;
@@ -28,15 +35,33 @@
 }
 
 .context{
-    position: relative;
-    top:-330px;
+    position: absolute;
+    padding: 15px;
+    width:100%;
     color: white;
     opacity: 100%;
     text-shadow: #343a40 2px 2px;
 }
 
+
+/*======================================*/
+
+#income_holder #label{
+    width:220px;
+}
+
+#balance_holder #label{
+    width:100px;
+}
+
+table #num{
+    width: 70px;
+}
+
+
+
 input{
-    width: 100px;
+    width: 70px;
 }
 
 html{
@@ -44,8 +69,15 @@ html{
      background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-    background-size: cover; 
+    background-size: cover;
 }
+
+
+/*
+    <div class="imgHolder">
+        <img class="background" src="background.jpg">
+    </div>
+
 
 .background{
     
@@ -56,3 +88,5 @@ html{
     clip: rect(123px,3000px,927px,0px);
     
 }
+*/
+
